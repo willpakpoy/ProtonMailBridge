@@ -6,6 +6,8 @@ spec:
   type: LoadBalancer
   ports:
     - port: 1025
+      name: smtp
     - port: 1143
+      name: imap
   selector:
     instance: {{ .Release.Name }}
